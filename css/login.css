@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Poppins:wght@500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root
+{
+    --text: #d9d9f2;
+    --background: #0c0c22;
+    --primary: #842e2e;
+    --secondary: #0f0f2a;
+    --accent: #46be46;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+.menu-mobile{display:none;}
+
+
+/* ========== HEADER ========== */
+
+header{
+    width: 100%;
+    padding: 5px 15px;
+    background-color: var(--secondary);
+}
+
+
+header .container
+{
+    width: 100%;
+    height: 60px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+/* ========== HEADER LOGO ========== */
+
+header .logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .logo img
+{
+    width: 100px;
+    height: 60px;
+    padding-left: 10px;
+    object-fit: contain;
+}
+
+header .logo a
+{
+    text-decoration: none;
+}
+
+header .logo h1
+{
+    width: 124px;
+    font-size: 21px;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    font-family: 'Bad Script', cursive;
+    font-weight: 600;
+}
+
+
+/* ========== HEADER LINKS ========== */
+
+header .menu_desktop
+{
+    width: 420px;
+    height: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .links
+{
+    width: 420px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .links ul
+{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header .links ul li a
+{
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: var(--text);
+    position: relative;
+    padding: 0 10px;
+}
+
+header .links ul li a:after
+{
+    content: "";
+    position: absolute;
+    background-color: var(--accent);
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -30px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+header .links ul li a:hover:after
+{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/* ========== HEADER BUTTONS ========== */
+
+header .buttons
+{
+    width: 190px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .buttons i
+{
+    margin-left: 5px;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.buttons .user-icon
+{
+    padding: 0 5px 2px 0;
+    align-items: center;
+}
+
+.buttons p.tool-tip-box
+{
+    display: inline-block;
+    position: relative;
+}
+
+.tool-tip
+{
+    width: 30px;
+    position: absolute;
+    right: 25px;
+    transition: 1s;
+    opacity: 0;
+    color: var(--text);
+}
+
+p.tool-tip-box:hover .tool-tip
+{
+    opacity: 1;
+}
+
+
+
+.btn-login i{padding:0 5px;}
+
+header .btn-login
+{
+    width: 85px;
+    height: 30px;
+    padding-right: 7px;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--text);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    transition: .4s;
+}
+
+.btn-login:hover{background-color: #3c3c59;}
+
+
+/* ========== PAGINA LOGIN ========== */
+
+.wrap
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    margin: 90px 0 30px;
+    background-color: transparent;
+    border: 2px solid rgba(15, 15, 42, .9);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    transition: height .2s ease;
+    overflow: hidden;
+}
+
+.wrap.active
+{
+    height: 520px;
+}
+
+.wrap .close
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+    color: var(--text);
+    background-color: var(--secondary);
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrap .form-box
+{
+    width: 100%;
+    padding: 40px;
+}
+
+
+.wrap .form-box.login
+{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrap.active .form-box.login
+{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+
+.wrap .form-box.register
+{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrap.active .form-box.register
+{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+.form-box h2
+{
+    font-size: 2em;
+    color: var(--text);
+    text-align: center;
+}
+
+.input-box
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--text);
+    margin: 30px 0;
+}
+
+.input-box label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--text);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .4s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+    top: -5px;
+}
+
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--text);
+    font-weight: bold;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon
+{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--text);
+    line-height: 60px;
+}
+
+.forgotten
+{
+    font-size: .9em;
+    color: var(--text);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgotten label input
+{
+    margin-right: 3px;
+}
+
+.forgotten a
+{
+    color: var(--text);
+    text-decoration: none;
+}
+
+.forgotten a:hover
+{
+    text-decoration: underline;
+}
+
+.btn
+{
+    width: 100%;
+    height: 45px;
+    background-color: var(--primary);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--text);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.register
+{
+    font-size: .9em;
+    color: var(--text);
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register a
+{
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register a:hover
+{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* ========== FOOTER ========== */
+
+footer
+{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+    background-color: var(--secondary);
+}
+
+footer .container
+{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .content
+{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .content img{width:60px;}
+
+footer .content p
+{
+    font-size: 1.1em;
+    color: var(--text);
+}
+
+footer .content b
+{
+    font-family: 'Bad Script', cursive;
+    font-weight: 600;
+}
+
+footer .tel
+{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--text);
+    font-size: 13px;
+}
+
+
+footer .social-media
+{
+    display: flex;
+    align-items: center;
+}
+
+footer .social-media ul
+{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.social-media ul li a
+{
+    padding: 0 15px;
+    color: var(--text);
+    font-size: 1.5em;
+}
+
+
+
+/* ========== DESIGN RESPONSIVO ========== */
+

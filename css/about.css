@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Poppins:wght@500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root
+{
+    --text: #d9d9f2;
+    --background: #0c0c22;
+    --primary: #842e2e;
+    --secondary: #0f0f2a;
+    --accent: #46be46;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background);
+    overflow-x: hidden;
+    /* scrollbar-gutter: stable; */
+}
+
+.clear{clear: both;}
+.menu-mobile{display:none;}
+
+
+/* ========== HEADER ========== */
+
+header{
+    width: 100%;
+    padding: 5px 15px;
+    background-color: var(--secondary);
+}
+
+
+header .container
+{
+    width: 100%;
+    height: 60px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ========== HEADER LOGO ========== */
+
+header .logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .logo img
+{
+    width: 100px;
+    height: 60px;
+    padding-left: 10px;
+    object-fit: contain;
+}
+
+header .logo a
+{
+    text-decoration: none;
+}
+
+header .logo h1
+{
+    width: 124px;
+    font-size: 21px;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    font-family: 'Bad Script', cursive;
+    font-weight: 600;
+}
+
+
+/* ========== HEADER LINKS ========== */
+
+header .menu_desktop
+{
+    width: 420px;
+    height: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .links
+{
+    width: 420px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .links ul
+{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header .links ul li a
+{
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: var(--text);
+    position: relative;
+    padding: 0 10px;
+}
+
+header .links ul li a:after
+{
+    content: "";
+    position: absolute;
+    background-color: var(--accent);
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -30px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+header .links ul li a:hover:after
+{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/* ========== HEADER BUTTONS ========== */
+
+header .buttons
+{
+    width: 190px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .buttons i
+{
+    margin-left: 5px;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.buttons .user-icon
+{
+    padding: 0 5px 2px 0;
+    align-items: center;
+}
+
+.buttons p.tool-tip-box
+{
+    display: inline-block;
+    position: relative;
+}
+
+.tool-tip
+{
+    width: 30px;
+    position: absolute;
+    right: 25px;
+    transition: 1s;
+    opacity: 0;
+    color: var(--text);
+}
+
+p.tool-tip-box:hover .tool-tip
+{
+    opacity: 1;
+}
+
+
+
+.btn-login i{padding:0 5px;}
+
+header .btn-login
+{
+    width: 85px;
+    height: 30px;
+    padding-right: 7px;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--text);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    transition: .4s;
+}
+
+.btn-login:hover{background-color: #3c3c59;}
+
+
+/* ========== SECTION SOBRE ========== */
+
+section.aboutus
+{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+section.aboutus .container
+{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.aboutus .content
+{
+    width: 80%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    color: var(--text);
+}
+
+section.aboutus .content img
+{
+    width: 60%;
+    object-fit: cover;
+}
+
+section.aboutus .half
+{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+section.aboutus .half h1
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 27px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+section.aboutus .half h3
+{
+    font-weight: 700;
+    font-style: oblique;
+    font-size: 21px;
+}
+
+section.aboutus .half p
+{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.line
+{
+    width: 80%;
+    height: 2px;
+    background-color: var(--accent);
+    margin: 60px 0;
+}
+
+section.aboutus .legacy
+{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+section.aboutus .legacy h1
+{
+    width: 50%;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text);
+}
+
+section.aboutus .legacy p
+{
+    width: 80%;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 23px;
+}
+
+section.aboutus .merit
+{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+section.aboutus .merit h1
+{
+    width: 50%;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text);
+}
+
+section.aboutus .merit p
+{
+    width: 80%;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 23px;
+}
+
+section.aboutus b{text-decoration: underline;text-decoration-color: #46be46;}
+
+section.aboutus .products_services
+{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+section.aboutus .products_services h1
+{
+    width: 50%;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text);
+}
+
+section.aboutus .products_services p
+{
+    width: 80%;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 23px;
+}
+
+section.aboutus .sustent_social
+{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+section.aboutus .sustent_social h1
+{
+    width: 50%;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text);
+}
+
+section.aboutus .only
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+section.aboutus .sustent_social p
+{
+    width: 80%;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 23px;
+}
+
+section.aboutus .future
+{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+section.aboutus .future h1
+{
+    width: 50%;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text);
+}
+
+section.aboutus .future p
+{
+    width: 80%;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 23px;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+/* ========== FOOTER ========== */
+
+footer
+{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+    background-color: var(--secondary);
+}
+
+footer .container
+{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .content
+{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .content img{width:60px;}
+
+footer .content p
+{
+    font-size: 1.1em;
+    color: var(--text);
+}
+
+footer .content b
+{
+    font-family: 'Bad Script', cursive;
+    font-weight: 600;
+}
+
+footer .tel
+{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--text);
+    font-size: 13px;
+}
+
+
+footer .social-media
+{
+    display: flex;
+    align-items: center;
+}
+
+footer .social-media ul
+{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.social-media ul li a
+{
+    padding: 0 15px;
+    color: var(--text);
+    font-size: 1.5em;
+}
+
+
+
+/* ========== DESIGN RESPONSIVO ========== */
+

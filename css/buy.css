@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Poppins:wght@500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root
+{
+    --text: #d9d9f2;
+    --background: #0c0c22;
+    --primary: #842e2e;
+    --secondary: #0f0f2a;
+    --accent: #46be46;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background);
+    overflow-x: hidden;
+    /* scrollbar-gutter: stable; */
+}
+
+.clear{clear: both;}
+.menu-mobile{display:none;}
+
+
+/* ========== HEADER ========== */
+
+header{
+    width: 100%;
+    padding: 5px 15px;
+    background-color: var(--secondary);
+}
+
+
+header .container
+{
+    width: 100%;
+    height: 60px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ========== HEADER LOGO ========== */
+
+header .logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .logo img
+{
+    width: 100px;
+    height: 60px;
+    padding-left: 10px;
+    object-fit: contain;
+}
+
+header .logo a
+{
+    text-decoration: none;
+}
+
+header .logo h1
+{
+    width: 124px;
+    font-size: 21px;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    font-family: 'Bad Script', cursive;
+    font-weight: 600;
+}
+
+
+/* ========== HEADER LINKS ========== */
+
+header .menu_desktop
+{
+    width: 420px;
+    height: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .links
+{
+    width: 420px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .links ul
+{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header .links ul li a
+{
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: var(--text);
+    position: relative;
+    padding: 0 10px;
+}
+
+header .links ul li a:after
+{
+    content: "";
+    position: absolute;
+    background-color: var(--accent);
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -30px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+header .links ul li a:hover:after
+{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/* ========== HEADER BUTTONS ========== */
+
+header .buttons
+{
+    width: 190px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .buttons i
+{
+    margin-left: 5px;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.buttons .user-icon
+{
+    padding: 0 5px 2px 0;
+    align-items: center;
+}
+
+.buttons p.tool-tip-box
+{
+    display: inline-block;
+    position: relative;
+}
+
+.tool-tip
+{
+    width: 30px;
+    position: absolute;
+    right: 25px;
+    transition: 1s;
+    opacity: 0;
+    color: var(--text);
+}
+
+p.tool-tip-box:hover .tool-tip
+{
+    opacity: 1;
+}
+
+
+
+.btn-login i{padding:0 5px;}
+
+header .btn-login
+{
+    width: 85px;
+    height: 30px;
+    padding-right: 7px;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--text);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    transition: .4s;
+}
+
+.btn-login:hover{background-color: #3c3c59;}
+
+
+/* ========== SECTION BUY ========== */
+
+section.buy
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+section.buy .line
+{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    position: relative;
+}
+
+section.buy .line h1
+{
+    text-align: center;
+    margin-top: 30px;
+    color: var(--text);
+    position: relative;
+    font-size: 25px;
+    font-style: italic;
+    background-color: var(--background);
+    padding: 0 20px;
+}
+
+
+.ln1
+{
+    width: 97%;
+    height: 2px;
+    background-color: var(--accent);
+    position: absolute;
+    top: 2.9em;
+}
+
+section.buy .container
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.buy .container h2
+{
+    color: var(--text);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+section.buy .container span
+{
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+section.buy .container .sidebar
+{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 30px;
+    background-color: var(--background);
+}
+
+section.buy .container .searchbar
+{
+    display: flex;
+    flex-direction: column;
+}
+
+section.buy .container .pricebar
+{
+    width: 100%;
+	height: 20px;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+    margin: 10px 0;
+    position: relative;
+}
+
+section.buy .container .pricebar-fill
+{
+    position: absolute;
+	left: 0;
+	top: 0;
+    /* width: 100px; */
+	height: 18px;
+	border-radius: 20px;
+	background: linear-gradient(to bottom, rgb(255,255,255), rgb(200,200,200));
+}
+
+section.buy .container .pointerbar
+{
+    width: 26px;
+	height: 26px;
+	position: absolute;
+	left: 0;
+	top: -3px;
+	cursor: pointer;
+	border-radius: 8px;
+	background: linear-gradient(to bottom, rgb(255,255,255), rgb(180,180,180));
+	border: 1px solid #777;
+}
+
+section.buy .container .pricetext
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.buy .container .pricetext p
+{
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+section.buy .container .filteryear
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10em;
+}
+
+section.buy .container .form-buy-wraper
+{
+    margin-top: 8px;
+}
+
+section.buy .container .form-buy-wraper input[type=checkbox]
+{
+    display: none;
+}
+
+section.buy .container .form-buy-wraper label
+{
+    width: 20px;
+	height: 20px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	border-radius: 3px;
+	vertical-align: top;
+	cursor: pointer;
+	position: relative;
+}
+
+section.buy .container .form-buy-wraper input[type=checkbox]:checked + label > .circle
+{
+    display: block;
+}
+
+.circle {
+	width: 8px;
+	height: 8px;
+	display: none;
+	border-radius: 4px;
+    background-color: var(--text);
+	position: absolute;
+	left: 6px;
+	top: 6px;
+}
+
+section.buy .container .form-buy-wraper span
+{
+    padding: 0 8px;
+}
+
+section.buy .container .options-vehicle
+{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 3.3em;
+    /* margin-top: 40px;
+    margin-bottom: 40px; */
+}
+
+section.buy .container .vitrine
+{
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+}
+
+section.buy .container .cars-img
+{
+    width: 310px;
+}
+
+section.buy .container .cars-img img
+{
+    width: 100%;
+    object-fit: contain;
+    border-radius: .8em;
+}
+
+section.buy .container .cars-inf
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+section.buy .container .cars-inf h3
+{
+    color: var(--text);
+    font-weight: 700;
+    font-size: 22px;
+}
+
+section.buy .container .cars-inf p
+{
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+section.buy .container .cars-inf a
+{
+    text-decoration: none;
+    color: var(--text);
+}
+
+section.buy .container .details
+{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+    margin: 0 0 130px 15px;
+    border-radius: .4em;
+    background-color: var(--accent);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+
+
+
+
+/* ========== FOOTER ========== */
+
+footer
+{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+    background-color: var(--secondary);
+}
+
+footer .container
+{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .content
+{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .content img{width:60px;}
+
+footer .content p
+{
+    font-size: 1.1em;
+    color: var(--text);
+}
+
+footer .content b
+{
+    font-family: 'Bad Script', cursive;
+    font-weight: 600;
+}
+
+footer .tel
+{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--text);
+    font-size: 13px;
+}
+
+
+footer .social-media
+{
+    display: flex;
+    align-items: center;
+}
+
+footer .social-media ul
+{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.social-media ul li a
+{
+    padding: 0 15px;
+    color: var(--text);
+    font-size: 1.5em;
+}
+
+
+
+/* ========== DESIGN RESPONSIVO ========== */
+
