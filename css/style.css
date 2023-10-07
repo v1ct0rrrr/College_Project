@@ -19,13 +19,13 @@
     --accent: #46be46;
 }
 
-html,body
+body
 {
-    max-width: 1600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    min-height: 100vh;
     background-color:var(--background);
 }
 
@@ -403,6 +403,9 @@ footer
     height: 100%;
     padding: 0 25px;
     background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 footer .container
