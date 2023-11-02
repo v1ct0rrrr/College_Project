@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <title>AlfaCar | A melhor loja do Brasil para comprar e vender seus veículos</title>
 </head>
 <body>
@@ -29,7 +30,10 @@
                 </div><!--links-->
             </nav><!--desktop-->
 
+            
+
             <div class="buttons">
+                <img src="img/brightness-high-fill.svg" id="lightmode" alt="">
                 <a class="btn-login" href="pages/login.html"><ion-icon name="person" class="user-icon"></ion-icon><b>Entrar</b></i></a>
                 <p class="tool-tip-box"><span class="tool-tip">Fale conosco</span><a href="#"><i class="bi bi-chat-left"></i></a></p><!--CRIAR CHAT COM BOT-->
             </div><!--buttons-->
@@ -47,7 +51,10 @@
 
 
     <section class="anuncios">
-        <img src="img/d.jpg" alt="Image">
+        <div class="slider">
+            <img src="img/d.jpg" alt="Image">
+            <img src="img/d2.jpg" alt="">
+        </div>
     </section>
 
     <section class="search">
@@ -123,10 +130,11 @@
 
     
 
-
-    <script src="/js/jquery.js"></script>
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -8,7 +8,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 .clear{clear: both;}
+
 
 :root
 {
@@ -18,6 +20,25 @@
     --secondary: #0f0f2a;
     --accent: #46be46;
 }
+
+
+/* .light-theme
+{
+    --text: #0d0d26;
+    --background: #ddddf3;
+    --primary: #d17b7b;
+    --secondary: #d6d6f0;
+    --accent: #41b941;
+} */
+
+
+#lightmode
+{
+    width: 25px;
+    cursor: pointer;
+}
+
+
 
 body
 {
@@ -156,7 +177,7 @@ header .links ul li a:hover:after
 
 header .buttons
 {
-    width: 190px;
+    width: 230px;
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -222,11 +243,62 @@ header .btn-login
 
 /* ========== SECTION ANUNCIOS ========== */
 
+section.anuncios
+{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
 section.anuncios img
 {
     width: 100%;
     object-fit: cover;
 }
+
+button.slick-prev
+{
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    z-index: 9;
+    background-color: transparent;
+    position: absolute;
+    background-image: url(../img/left.png);
+    background-repeat: no-repeat;
+    top: 35%;
+    left: 10%;
+    cursor: pointer;
+}
+
+button.slick-next
+{
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    z-index: 9;
+    background-color: transparent;
+    position: absolute;
+    background-image: url(../img/right.png);
+    top: 35%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.slick-list
+{
+    width: 100%!important;
+}
+
+.slick-initialized
+{
+    overflow: hidden;
+}
+
+
+
 
 
 /* ========== SECTION SEARCH ========== */
@@ -283,7 +355,6 @@ section.search .links a:after
 
 section.search .links a:hover
 {
-    color: black;
     font-weight: bold;
 }
 
@@ -343,7 +414,7 @@ section.search input[type=submit]:hover
 }
 
 
-/* ========== SECTION SEARCH ========== */
+/* ========== SECTION CATEGORY ========== */
 
 section.category
 {

@@ -17,6 +17,23 @@
     --accent: #46be46;
 }
 
+
+/* .light-theme
+{
+    --text: #0d0d26;
+    --background: #ddddf3;
+    --primary: #d17b7b;
+    --secondary: #d6d6f0;
+    --accent: #41b941;
+} */
+
+
+#lightmode
+{
+    width: 25px;
+    cursor: pointer;
+}
+
 body
 {
     display: flex;
@@ -154,7 +171,7 @@ header .links ul li a:hover:after
 
 header .buttons
 {
-    width: 190px;
+    width: 230px;
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -352,6 +369,12 @@ header .btn-login
     font-size: 1.2em;
     color: var(--text);
     line-height: 60px;
+}
+
+.input-box .ishow
+{
+    right: 40px;
+    cursor: pointer;
 }
 
 .forgotten

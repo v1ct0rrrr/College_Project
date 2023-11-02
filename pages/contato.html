@@ -30,6 +30,7 @@
             </nav><!--desktop-->
 
             <div class="buttons">
+                <img src="../img/brightness-high-fill.svg" id="lightmode" alt="">
                 <a class="btn-login" href="../pages/login.html"><ion-icon name="person" class="user-icon"></ion-icon><b>Entrar</b></i></a>
                 <p class="tool-tip-box"><span class="tool-tip">Fale conosco</span><a href="#"><i class="bi bi-chat-left"></i></a></p><!--CRIAR CHAT COM BOT-->
             </div><!--buttons-->
@@ -51,21 +52,24 @@
             <h2>Contato</h2>
         </div><!--line-titulo-->
     
-        <form>
+        <form id="form">
             <div class="input-wraper w100">
-                <input placeholder="Nome" type="text" required>	
+                <input placeholder="Nome" type="text" name="inputN" id="name" class="required" oninput="nameValidate()">	
+                <span class="span-required error-span">Nome deve ter no mínimo 3 caracteres</span>
             </div><!--input-wraper w100-->
     
             <div class="input-wraper w50">
-                <input placeholder="Email" type="email" required>	
+                <input placeholder="Email" type="email" id="email" name="inputN" class="required" oninput="emailValidate()">
+                <span class="span-required error-span">Email inválido</span>
             </div><!--input-wraper w50-->
     
             <div class="input-wraper w50">
-                <input placeholder="Telefone" type="number" inputmode="numeric" required>	
+                <input placeholder="Telefone" type="number" id="telefone" name="inputN" class="required " oninput="telValidate()" inputmode="numeric">	
+                <span class="span-required error-span">Telefone deve ter 11 dígitos.</span>
             </div><!--input-wraper w50-->
     
             <div class="input-wraper w100">
-                <textarea placeholder="Mensagem" required></textarea>
+                <textarea placeholder="Mensagem"></textarea>
             </div><!--input-wraper w100-->
     
             <div class="input-wraper w100">
@@ -73,6 +77,10 @@
             </div><!--input-wraper w100-->
             <div class="clear"></div>
         </form>
+
+        <div class="messageTy hidden">
+            <h1>Enviado com sucesso</h1>
+        </div>
     </section><!--contact-->
 
 
